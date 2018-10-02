@@ -1,0 +1,170 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Inform 6",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.inform6",
+					"comment": "Single line comment.",
+					"match": "!(.*)$"
+				}			
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.dec.inform6",					
+					"match": "\\-?\\d+"
+				},
+				{
+					"name": "constant.numeric.bin.inform6",					
+					"match": "\\${2}[01]+"
+				},				
+				{
+					"name": "constant.numeric.hex.inform6",					
+					"match": "\\${1}[a-zA-Z\\d]+"
+				},
+				{
+					"name": "constant.numeric.string.inform6",					
+					"begin": "'",
+					"end": "'"
+				}		
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"match": "(@?[_[:alpha:]][_[:alnum:]]*)\\((.*?)\\)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.inform6"
+						}
+					}
+				},
+				{
+					"match": "\\[\\s*?(@?[_[:alpha:]][_[:alnum:]]*)\\b",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.inform6"
+						}
+					}
+				},
+				{
+					"match": "<{1,2}(.*?)>{1,2}",					
+					"name": "meta.selector.inform6"										
+				}					
+			]
+		},		
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.other.inform6",
+					"comment": "Directives.",
+					"match": "(?i)\\b(abbreviate|array|attribute|class|constant|default|end|extend|global|import|include|link|lowstring|message|object|property|release|replace|serial|switches|statusline|system_file|verb|zcharacter)\\b"
+				},				
+				{
+					"name": "entity.other.attribute-name.properties.inform6",				
+					"match": "(?i)\\b(add_to_scope|after|article|articles|before|cant_go|capacity|d_to|daemon|describe|description|door_dir|door_to|e_to|each_turn|found_in|grammar|in_to|initial|inside_description|invent|life|list_together|name|n_to|ne_to|number|nw_to|orders|out_to|parse_name|plural|react_after|react_before|s_to|se_to|short_name|short_name_indef|sw_to|time_left|time_out|u_to|w_to|when_closed|when_open|when_on|when_off|with_key)\\b"			
+				},
+				{
+					"name": "entity.name.type.properties.inform6",				
+					"match": "\\b(Pronouns|Quit|Restart|Restore|Save|Verify|ScriptOn|ScriptOff|Places|Objects|Score|FullScore|Version|LMode1|LMode2|LMode3)\\b"			
+				},				
+				{
+					"name": "entity.name.type.properties.inform6",				
+					"match": "\\b(Read|Look|Examine|Search|Inv|InvTall|InvWide|Take|Drop|Remove|PutOn|Insert|LetGo|Receive|Empty|EmptyT|Transfer|Go|Enter|GetOff|GoIn|Exit|Unlock|Lock|SwitchOn|SwitchOff|Open|Close|Disrobe|Wear|Eat|Wait)\\b"			
+				},
+				{
+					"name": "entity.name.type.properties.inform6",				
+					"match": "\\b(LookUnder|Listen|Taste|Touch|Pull|Push|Wave|Turn|PushDir|ThrowAt|ThrownAt|JumpOver|Tie|Drink|Fill|Attack|Swing|Blow|Rub|Set|SetTo|Buy|Climb|Squeeze|Burn|Dig|Cut|Consult|Tell|Answer|Ask|Give|Show|AskFor|WakeOther|Kiss|Sleep|Sing|WaveHands|Swim|Sorry|Strong|Mild|Jump|Think|Smell|Pray|VagueGo|Yes|No|Wake)\\b"			
+				},								
+				{
+					"name": "entity.name.type.properties.inform6",				
+					"match": "(##\\w+)"			
+				},					
+				{
+					"name": "keyword.control.inform6",
+					"match": "(?i)\\b(break|continue|do|until|else|for|if|objectloop|return|switch|while|default)\\b"
+				},
+				{
+					"match": "(?i)\\b(jump)\\s+\\w+\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.control.jump.inform6"
+						}
+					}
+				},
+				{
+					"name": "keyword.other.inform6",
+					"match": "(?i)\\b(box|font on|font off|new_line|with|move|to|give|print|print_ret|remove|spaces|string|style|rfalse|rtrue)\\b"
+				},
+				{
+					"name": "keyword.other.inform6",
+					"match": "(?i)\\b(has|hasnt|in|notin|ofclass|provides|or)\\b"
+				},
+				{
+					"name": "keyword.operator.general.inform6",
+					"match": "(,|=|\\+|-|\\*|/|%|&|\\||~|->|-->|-|\\+\\+|--|\\.&|\\.#|\\.|::)"
+				},				
+				{
+					"name": "keyword.operator.conditional.inform6",
+					"match": "(?i)\\b(&&|\\|\\||~~|==|~=|>|>=|<|<=)\\b"
+				},				
+				{
+					"name": "keyword.control.inform6.preprocessor.inform6",					
+					"match": "(?i)#(ifdef|ifndef|ifnot|iftrue|iffalse|endif)(.*);"
+				},
+				{
+					"name": "invalid.illegal.internal.inform6",
+					"match": "(?i)\\b(inversion|quit|read|restore|save)\\b"
+				}
+			]
+		},		
+		"strings": {
+			"name": "meta.embedded.inform6",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.inform6",
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "string.value.inform6",
+					"comment": "attributes",
+					"match": "(?i)\\b(absent|animate|clothing|concealed|container|door|edible|enterable|female|general|light|lockable|locked|male|moved|neuter|on|open|openable|pluralname|proper|scenery|scored|static|supporter|switchable|talkable|transparent|visited|workflag|worn)\\b"			
+				},
+				{
+					"name": "meta.selector.inform6",
+					"match": "(?i)\\b(self|player|location)\\b"			
+				}
+			]
+		}
+	},
+	"scopeName": "text.inf.inform6"
+}

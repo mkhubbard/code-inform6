@@ -1,0 +1,26 @@
+{
+    "name": "inform6",
+    "displayName": "Inform 6",
+    "description": "Language support for Inform 6.",
+    "version": "0.0.1",
+    "publisher": "mhubbard",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "inform6",
+            "aliases": ["Inform 6", "inform6"],
+            "extensions": [".inf"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "inform6",
+            "scopeName": "text.inf.inform6",
+            "path": "./syntaxes/inform6.tmLanguage.json"
+        }]
+    }
+}
