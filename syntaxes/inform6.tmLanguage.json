@@ -81,8 +81,8 @@
 				{
 					"name": "keyword.other.inform6",
 					"comment": "Directives.",
-					"match": "(?i)\\b(abbreviate|array|attribute|class|constant|default|end|extend|global|import|include|link|lowstring|message|object|property|release|replace|serial|switches|statusline|system_file|verb|zcharacter)\\b"
-				},				
+					"match": "(?i)\\b(abbreviate|array|attribute|class|constant|default|end|extend|global|import|include|link|lowstring|message|object|property|private|release|replace|serial|switches|statusline|system_file|verb|zcharacter)\\b"
+				},							
 				{
 					"name": "entity.other.attribute-name.properties.inform6",				
 					"match": "(?i)\\b(add_to_scope|after|article|articles|before|cant_go|capacity|d_to|daemon|describe|description|door_dir|door_to|e_to|each_turn|found_in|grammar|in_to|initial|inside_description|invent|life|list_together|name|n_to|ne_to|number|nw_to|orders|out_to|parse_name|plural|react_after|react_before|s_to|se_to|short_name|short_name_indef|sw_to|time_left|time_out|u_to|w_to|when_closed|when_open|when_on|when_off|with_key)\\b"			
@@ -118,6 +118,10 @@
 				{
 					"name": "keyword.other.inform6",
 					"match": "(?i)\\b(box|font on|font off|new_line|with|move|to|give|print|print_ret|remove|spaces|string|style|rfalse|rtrue)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name.properties.inform6",
+					"match": "(?i)\\b(create|recreate|destroy|copy|remaining)\\b"
 				},
 				{
 					"name": "keyword.other.inform6",
@@ -161,7 +165,7 @@
 				},
 				{
 					"name": "meta.selector.inform6",
-					"match": "(?i)\\b(self|player|location)\\b"			
+					"match": "(?i)\\b(self|player|location|real_location)\\b"			
 				}
 			]
 		}
