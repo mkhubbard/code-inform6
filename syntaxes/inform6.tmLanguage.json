@@ -93,7 +93,7 @@
 				},				
 				{
 					"name": "entity.name.type.properties.inform6",				
-					"match": "\\b(Read|Look|Examine|Search|Inv|InvTall|InvWide|Take|Drop|Remove|PutOn|Insert|LetGo|Receive|Empty|EmptyT|Transfer|Go|Enter|GetOff|GoIn|Exit|Unlock|Lock|SwitchOn|SwitchOff|Open|Close|Disrobe|Wear|Eat|Wait)\\b"			
+					"match": "\\b(Read|Look|Examine|Search|Inv|InvTall|InvWide|Take|Drop|Remove|PutOn|Insert|LetGo|Receive|Empty|EmptyT|Transfer|Going|Go|Enter|GetOff|GoIn|Exit|Unlock|Lock|SwitchOn|SwitchOff|Open|Close|Disrobe|Wear|Eat|Wait)\\b"			
 				},
 				{
 					"name": "entity.name.type.properties.inform6",				
