@@ -172,9 +172,13 @@
 					"match": "(?i)\\b(absent|animate|clothing|concealed|container|door|edible|enterable|female|general|light|lockable|locked|male|moved|neuter|on|open|openable|pluralname|proper|scenery|scored|static|supporter|switchable|talkable|transparent|visited|workflag|worn)\\b"			
 				},
 				{
-					"name": "string.value.inform62",
-					"match": "(?i)\\b(self|player|location|real_location)\\b"			
-				}
+					"name": "string.value.inform6.self",
+					"match": "(?i)\\b(self)\\b"			
+				},
+				{
+					"name": "string.value.inform6.library-globals",
+					"match": "(?i)\\b(player|location|real_location|deadflag|orev_location|visibility_ceiling|lookmode|print_player_flag|lastdesc)\\b"			
+				}								
 			]
 		}
 	},
