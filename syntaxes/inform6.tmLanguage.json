@@ -63,13 +63,21 @@
 					}
 				},
 				{
-					"match": "\\[\\s*?(@?[_[:alpha:]][_[:alnum:]]*)\\b",
+					"match": "^\\s*?\\[\\s*?(@?[_[:alpha:]][_[:alnum:]]*)\\b",
 					"captures": {
 						"1": {
 							"name": "entity.name.function.inform6"
 						}
 					}
 				},
+				{
+					"match": "^\\s*?(@?[_[:alpha:]][_[:alnum:]]*)\\s*?\\[.*?;",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.inform6"
+						}
+					}
+				},								
 				{
 					"match": "<{1,2}(.*?)>{1,2}",					
 					"name": "meta.selector.inform6"										
@@ -164,7 +172,7 @@
 					"match": "(?i)\\b(absent|animate|clothing|concealed|container|door|edible|enterable|female|general|light|lockable|locked|male|moved|neuter|on|open|openable|pluralname|proper|scenery|scored|static|supporter|switchable|talkable|transparent|visited|workflag|worn)\\b"			
 				},
 				{
-					"name": "meta.selector.inform6",
+					"name": "string.value.inform62",
 					"match": "(?i)\\b(self|player|location|real_location)\\b"			
 				}
 			]
