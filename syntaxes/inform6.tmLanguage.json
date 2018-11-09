@@ -35,15 +35,15 @@
 			"patterns": [
 				{
 					"name": "constant.numeric.dec.inform6",					
-					"match": "\\-?\\d+"
+					"match": "(?<!\\w)(\\-?\\d+)(?!\\w)"
 				},
 				{
 					"name": "constant.numeric.bin.inform6",					
-					"match": "\\${2}[01]+"
+					"match": "(?<!\\w)(\\${2}[01]+)(?!\\w)"
 				},				
 				{
 					"name": "constant.numeric.hex.inform6",					
-					"match": "\\${1}[a-zA-Z\\d]+"
+					"match": "(?<!\\w)(\\${1}[a-zA-Z\\d]+)(?!\\w)"
 				},
 				{
 					"name": "constant.numeric.string.inform6",					
