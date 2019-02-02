@@ -77,11 +77,7 @@
 							"name": "entity.name.function.inform6"
 						}
 					}
-				},								
-				{
-					"match": "<{1,2}(.*?)>{1,2}",					
-					"name": "meta.selector.inform6"										
-				}					
+				}			
 			]
 		},		
 		"keywords": {
@@ -102,6 +98,10 @@
 				{
 					"name": "entity.name.type.properties.inform6",				
 					"match": "\\b(Read|Look|Examine|Search|Inv|InvTall|InvWide|Take|Drop|Remove|PutOn|Insert|LetGo|Receive|Empty|EmptyT|Transfer|Going|Go|Enter|GetOff|GoIn|Exit|Unlock|Lock|SwitchOn|SwitchOff|Open|Close|Disrobe|Wear|Eat|Wait)\\b"			
+				},
+				{
+					"name": "entity.name.type.properties.inform6",				
+					"match": "<{1,2}.*>{1,2}"			
 				},
 				{
 					"name": "entity.name.type.properties.inform6",				
