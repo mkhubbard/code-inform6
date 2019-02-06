@@ -113,7 +113,7 @@
 				},					
 				{
 					"name": "keyword.control.inform6",
-					"match": "(?i)\\b(break|continue|do|until|else|for|if|objectloop|return|switch|while|default)\\b"
+					"match": "(?i)\\b(break|continue|do|until|else|for|if|objectloop|return|switch|while|default|false|true)\\b"
 				},
 				{
 					"match": "(?i)\\b(jump)\\s+\\w+\\b",
