@@ -93,11 +93,11 @@
 				},
 				{
 					"name": "entity.name.type.properties.inform6",				
-					"match": "\\b(Pronouns|Quit|Restart|Restore|Save|Verify|ScriptOn|ScriptOff|Places|Objects|Score|FullScore|Version|LMode1|LMode2|LMode3)\\b"			
+					"match": "(?i)\\b(Pronouns|Quit|Restart|Restore|Save|Verify|ScriptOn|ScriptOff|Places|Objects|Score|FullScore|Version|LMode1|LMode2|LMode3)\\b"			
 				},				
 				{
 					"name": "entity.name.type.properties.inform6",				
-					"match": "\\b(Read|Look|Examine|Search|Inv|InvTall|InvWide|Take|Drop|Remove|PutOn|Insert|LetGo|Receive|Empty|EmptyT|Transfer|Going|Go|Enter|GetOff|GoIn|Exit|Unlock|Lock|SwitchOn|SwitchOff|Open|Close|Disrobe|Wear|Eat|Wait)\\b"			
+					"match": "(?i)\\b(Read|Look|Examine|Search|Inv|InvTall|InvWide|Take|Drop|Remove|PutOn|Insert|LetGo|Receive|Empty|EmptyT|Transfer|Going|Go|Enter|GetOff|GoIn|Exit|Unlock|Lock|SwitchOn|SwitchOff|Open|Close|Disrobe|Wear|Eat|Wait):"			
 				},
 				{
 					"name": "entity.name.type.properties.inform6",				
@@ -105,7 +105,7 @@
 				},
 				{
 					"name": "entity.name.type.properties.inform6",				
-					"match": "\\b(LookUnder|Listen|Taste|Touch|Pull|Push|Wave|Turn|PushDir|ThrowAt|ThrownAt|JumpOver|Tie|Drink|Fill|Attack|Swing|Blow|Rub|Set|SetTo|Buy|Climb|Squeeze|Burn|Dig|Cut|Consult|Tell|Answer|Ask|Give|Show|AskFor|WakeOther|Kiss|Sleep|Sing|WaveHands|Swim|Sorry|Strong|Mild|Jump|Think|Smell|Pray|VagueGo|Yes|No|Wake)\\b"			
+					"match": "(?i)\\b(LookUnder|Listen|Taste|Touch|Pull|Push|Wave|Turn|PushDir|ThrowAt|ThrownAt|JumpOver|Tie|Drink|Fill|Attack|Swing|Blow|Rub|Set|SetTo|Buy|Climb|Squeeze|Burn|Dig|Cut|Consult|Tell|Answer|Ask|Give|Show|AskFor|WakeOther|Kiss|Sleep|Sing|WaveHands|Swim|Sorry|Strong|Mild|Jump|Think|Smell|Pray|VagueGo|Yes|No|Wake|ListMiscellany):"			
 				},								
 				{
 					"name": "entity.name.type.properties.inform6",				
@@ -177,7 +177,7 @@
 				},
 				{
 					"name": "string.value.inform6.library-globals",
-					"match": "(?i)\\b(player|location|real_location|deadflag|orev_location|visibility_ceiling|lookmode|print_player_flag|lastdesc)\\b"			
+					"match": "(?i)\\b(player|location|real_location|deadflag|orev_location|visibility_ceiling|lookmode|print_player_flag|lastdesc|nothing)\\b"			
 				}								
 			]
 		}
