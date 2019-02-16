@@ -59,6 +59,16 @@
 					"captures": {
 						"1": {
 							"name": "entity.name.function.inform6"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#keywords"
+								},
+								{
+									"include": "#variables"
+								}															
+							]
 						}
 					}
 				},
